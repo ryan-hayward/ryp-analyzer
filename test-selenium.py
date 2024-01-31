@@ -30,6 +30,10 @@ def login(url: str):
     input_pw.send_keys(password)
     driver.find_element(By.XPATH, '//*[@id="root"]/div[3]/form/div[3]/button').click()
 
+    # @TODO come back to this and replace the timer with something more elegant
+    time.sleep(1)
+    driver.find_element(By.XPATH, '//*[@id="root"]/div[3]/div[1]/div[3]/div[2]/ul/li/div/a').click()
+
     time.sleep(100)
     driver.quit()
 
